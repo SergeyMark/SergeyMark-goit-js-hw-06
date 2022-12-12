@@ -16,11 +16,12 @@ const images = [
 const gallery = document.querySelector('.gallery');
 
 gallery.style.display = "flex";
+gallery.style.gap = "10px";
 
 console.log(gallery);
 
 const listGallery = images.map((picture) => `<li style="list-style: none;"><img src="${picture.url}" alt="${picture.alt}" style="width: 250px; height: 200px;"></li>`).join(" ");
-gallery.insertAdjacentHTML("beforebegin", listGallery);
+gallery.insertAdjacentHTML("afterbegin", listGallery);
 
 
 
