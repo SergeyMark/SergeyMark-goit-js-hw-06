@@ -10,12 +10,14 @@ function formSubmit(event) {
     if (email.value === "" || password.value === "") {
         alert("oops need to write in the form");
     } else{
-        console.log(`Email: ${email.value}, Password: ${password.value}`);
+        // console.log(`Email: ${email.value}, Password: ${password.value}`);
 
         const dataOutput = {
             email: email.value,
             password: password.value,
         }
+
+        console.log(dataOutput);
     }
     event.currentTarget.reset();
 }
