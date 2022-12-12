@@ -8,21 +8,16 @@ const ingredients = [
 ];
 
 const navigation = document.querySelector('#ingredients');
-const createLi = document.createElement('li');
 
-createLi.classList.add('item');
+const createdLi = ingredients.map(ingredient =>{
+    const li = document.createElement('li');
+    li.classList.add('item');
+    li.textContent = ingredient;
 
-console.log(createLi);
+    return li;
+});
 
+navigation.append(...createdLi);
 
-
-
-// for (const ingredient of ingredients) {
-//     const navElement = document.createElement('li');
-//     navElement.classList.add("item");
-//     navElement.textContent = ingredient;
-//     navigation.append(navElement);
-// }
-
-// console.log(navigation);
+console.log(navigation);
 
