@@ -8,7 +8,11 @@ const ingredients = [
 ];
 
 const navigation = document.querySelector('#ingredients');
+const createLi = document.createElement('li');
 
+createLi.classList.add('item');
+
+console.log(createLi);
 
 
 
